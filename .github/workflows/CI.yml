@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main*
+  workflow_dispatch:
+
+jobs:
+  CI:
+    container:
+      image: node:16
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Version check
+        uses: vvrjs/publish-then-tag-test@v0.1
+        with:
+          npmToken: ${{ secrets.NPM_TOKEN }}
+          githubToken: ${{ secrets.GIT_HUB_TOKEN }}
+          sha: ${{ github.sha }}
+          repo: ${{ github.repository }}
