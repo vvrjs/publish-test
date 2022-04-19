@@ -8,7 +8,9 @@ on:
 
 jobs:
   CI:
-    runs-on: node:16
+    runs-on: ubuntu-latest
+    container:
+      image: node:16
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
