@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Version check
-        uses: vvrjs/publish-then-tag@v0.1
+        uses: vvrjs/publish-then-tag@v0.2
         with:
           npmToken: ${{ secrets.NPM_TOKEN }}
           githubToken: ${{ secrets.GIT_HUB_TOKEN }}
