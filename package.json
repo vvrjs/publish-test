@@ -1,0 +1,21 @@
+{
+    "name": "@vvrjs/publish-test",
+    "access": "public",
+    "version": "1.0.0",
+    "description": "test project for publish-then-tag",
+    "scripts": {
+    },
+	"files": [
+	    "dist"
+	],
+    "keywords": [],
+    "author": "Vladimir Repin",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:vvrjs/publish-test.git"
+    },
+    "devDependencies": {
+    },
+    "dependencies": {
+    }
+}
