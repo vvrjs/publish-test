@@ -14,7 +14,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
+      - name: install
+        run: npm i
       - name: Version check
         uses: vvrjs/publish-then-tag@v0.2
         with:
@@ -22,3 +23,4 @@ jobs:
           githubToken: ${{ secrets.GIT_HUB_TOKEN }}
           sha: ${{ github.sha }}
           repo: ${{ github.repository }}
+          mode: CI
